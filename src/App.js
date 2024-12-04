@@ -13,22 +13,18 @@ const LandingPage = () => {
             Empower your kids with a safe and enriching digital experience.
           </p>
           <div className="mt-8 flex justify-center space-x-4">
-            <a
-              href="https://forms.gle/sbzCa3JwhjMUVNQWA"
-               target="_blank"
-               rel="noopener noreferrer"
+            <button
+              onClick={() => window.open("https://forms.gle/sbzCa3JwhjMUVNQWA", "_blank")}
               className="btn btn-primary px-10 py-4 rounded-lg shadow-lg text-lg bg-green-500 hover:bg-green-600"
             >
               Sign Up
-            </a>
-            <a
-              href="https://go.supakidapp.com"
-               target="_blank"
-               rel="noopener noreferrer"
+            </button>
+            <button
+              onClick={() => window.open("https://go.supakidapp.com", "_blank")}
               className="btn btn-secondary px-10 py-4 rounded-lg shadow-lg text-lg bg-blue-500 hover:bg-blue-600"
             >
               Go to App
-            </a>
+            </button>
           </div>
         </div>
       </header>
