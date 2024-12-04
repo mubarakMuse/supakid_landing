@@ -16,6 +16,7 @@ const LandingPage = () => {
             <a
               href="https://forms.gle/sbzCa3JwhjMUVNQWA"
                target="_blank"
+               rel="noreferrer"
               className="btn btn-primary px-10 py-4 rounded-lg shadow-lg text-lg bg-green-500 hover:bg-green-600"
             >
               Sign Up
@@ -23,6 +24,7 @@ const LandingPage = () => {
             <a
               href="https://go.supakidapp.com"
                target="_blank"
+               rel="noreferrer"
               className="btn btn-secondary px-10 py-4 rounded-lg shadow-lg text-lg bg-blue-500 hover:bg-blue-600"
             >
               Go to App
