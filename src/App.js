@@ -133,18 +133,18 @@ const LandingPage = () => {
           </p>
           <p>© 2024 SupaKid. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-6">
-            <a href="#" className="hover:text-gray-300">
+            <button className="hover:text-gray-300">
               <i className="fab fa-facebook fa-lg"></i>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button className="hover:text-gray-300">
               <i className="fab fa-twitter fa-lg"></i>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button className="hover:text-gray-300">
               <i className="fab fa-instagram fa-lg"></i>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button className="hover:text-gray-300">
               <i className="fab fa-linkedin fa-lg"></i>
-            </a>
+            </button>
           </div>
         </div>
       </footer>
