@@ -2,6 +2,49 @@ import React from "react";
 import logo from "./logo.png";
 
 const LandingPage = () => {
+  const featureIcon1 = "💡";
+  const featureIcon2 = "📘";
+  const featureIcon3 = "🛡️";
+  const featureIcon4 = "🌟";
+  const testimonialImage = "https://via.placeholder.com/150"; // Placeholder image
+
+  const features = [
+    { icon: featureIcon1, title: "Filtered YouTube", description: "Choose safe, educational channels for your kids." },
+    { icon: featureIcon2, title: "Brain-Boosting Games", description: "Fun, non-addictive games that promote learning." },
+    { icon: featureIcon3, title: "Parental Dashboard", description: "Monitor and customize your child's digital usage." },
+    { icon: featureIcon4, title: "Future Tools", description: "More tools to shape safe digital experiences coming soon." },
+  ];
+
+  const steps = [
+    { step: "1. Sign Up", description: "Create your parent account." },
+    { step: "2. Add Child", description: "Set up profiles for your kids." },
+    { step: "3. Customize Settings", description: "Tailor content to your preferences." },
+    { step: "4. Enjoy Together", description: "Explore a safe digital world." },
+  ];
+
+  const plans = [
+    {
+      title: "Monthly Plan",
+      price: "$6.99/month",
+      description: [
+        "✔ Curated content for kids",
+        "✔ Activity monitoring",
+        "✔ Priority support",
+      ],
+      link: "https://buy.stripe.com/3cs8xH7kJ7x7eI04gi",
+    },
+    {
+      title: "Annual Plan",
+      price: "$59.99/year ($4.99/month)",
+      description: [
+        "✔ Save 30% with annual billing",
+        "✔ All monthly features included",
+        "✔ Exclusive future perks",
+      ],
+      link: "https://buy.stripe.com/dR6dS1eNbeZzgQ8003",
+    },
+  ];
+
   return (
     <div className="bg-gray-50 min-h-screen font-sans">
       {/* Header */}
@@ -18,11 +61,11 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-blue-500  text-white py-20">
+      <section className="bg-blue-500 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">Empower Your Kids' Digital Journey</h1>
+          <h1 className="text-5xl font-bold mb-4">Take Back Control</h1>
           <p className="text-lg mb-6">
-            A safe and enriching digital experience designed specifically for children.
+            Supa Kid is a suite of tools for parents to take back control over their children's digital experience.
           </p>
           <div className="space-y-4 lg:space-x-4">
             <button
@@ -52,32 +95,12 @@ const LandingPage = () => {
             Why Choose SupaKid?
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "Filterd Youtube",
-                description: "Safe version of Youtube, parent-approved channels for kids.",
-                color: "bg-blue-100 text-blue-900",
-              },
-              {
-                title: "Educational Games",
-                description: "Fun and engaging games that promote learning.",
-                color: "bg-green-100 text-green-900",
-              },
-              {
-                title: "Parental Controls",
-                description: "Monitor and manage your child's app usage.",
-                color: "bg-yellow-100 text-yellow-900",
-              },
-              {
-                title: "Community Support",
-                description: "Join a community of like-minded parents.",
-                color: "bg-purple-100 text-purple-900",
-              },
-            ].map((feature, index) => (
+            {features.map((feature, index) => (
               <div
                 key={index}
-                className={`${feature.color} rounded-lg p-6 shadow-md text-center`}
+                className="bg-gray-50 p-6 rounded-lg shadow-md text-center"
               >
+                <div className="text-5xl mb-4">{feature.icon || "🔧"}</div>
                 <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                 <p className="text-sm">{feature.description}</p>
               </div>
@@ -89,20 +112,18 @@ const LandingPage = () => {
       {/* How It Works Section */}
       <section className="py-12 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">How It Works</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">Our Mission</h2>
+          <p className="text-lg mb-6">
+            Our goal is to continue improving the app and add more tools to help parents gain control over their children's digital experiences.
+          </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { step: "1. Sign Up", description: "Create your parent account." },
-              { step: "2. Add Child", description: "Set up profiles for your kids." },
-              { step: "3. Customize Settings", description: "Tailor content to your preferences." },
-              { step: "4. Enjoy Together", description: "Explore a safe digital world." },
-            ].map((item, index) => (
+            {steps.map((step, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg p-6 shadow-md text-center"
               >
-                <h3 className="text-lg font-bold text-gray-800 mb-2">{item.step}</h3>
-                <p className="text-sm text-gray-600">{item.description}</p>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">{step.step}</h3>
+                <p className="text-sm text-gray-600">{step.description}</p>
               </div>
             ))}
           </div>
@@ -114,33 +135,10 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">Pricing Plans</h2>
           <div className="grid gap-6 sm:grid-cols-2">
-            {[
-              {
-                title: "Monthly Plan",
-                price: "$6.99/month",
-                description: [
-                  "✔ Curated content for kids",
-                  "✔ Activity monitoring",
-                  "✔ Priority support",
-                ],
-                link: "https://buy.stripe.com/3cs8xH7kJ7x7eI04gi",
-                color: "bg-blue-50 text-blue-600",
-              },
-              {
-                title: "Annual Plan",
-                price: "$59.99/year ($4.99/month)",
-                description: [
-                  "✔ Save 30% with annual billing",
-                  "✔ All monthly features included",
-                  "✔ Exclusive future perks",
-                ],
-                link: "https://buy.stripe.com/dR6dS1eNbeZzgQ8003",
-                color: "bg-green-50 text-green-600",
-              },
-            ].map((plan, index) => (
+            {plans.map((plan, index) => (
               <div
                 key={index}
-                className={`${plan.color} rounded-lg p-6 shadow-md text-center`}
+                className="bg-gray-50 rounded-lg p-6 shadow-md text-center"
               >
                 <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
                 <p className="text-lg font-semibold mb-4">{plan.price}</p>
