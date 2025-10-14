@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Mail, Phone, Calendar } from 'lucide-react';
+import { ArrowLeft, Shield, Mail, Calendar } from 'lucide-react';
 import logo from '../logo.jpg';
 
 const PrivacyPolicy = () => {
