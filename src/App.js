@@ -5,6 +5,7 @@ import appPreview from "./sc.png";
 import { CheckCircle, ArrowRight, Shield } from "lucide-react";
 import { insertLead } from "./lib/supabase";
 import LeadsAdmin from "./components/LeadsAdmin";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const MinimalLanding = () => {
   const [formData, setFormData] = useState({
@@ -256,13 +257,21 @@ const MinimalLanding = () => {
             </a>
           </p>
           <p className="text-xs text-gray-500 mb-3">© 2024 SupaKid. All rights reserved.</p>
-          <Link 
-            to="/leads" 
-            className="inline-flex items-center space-x-1 text-xs text-gray-500 hover:text-gray-700 transition-colors"
-          >
-            <Shield className="w-3 h-3" />
-            <span>Admin</span>
-          </Link>
+          <div className="flex items-center justify-center space-x-4">
+            <Link 
+              to="/privacy-policy" 
+              className="text-xs text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link 
+              to="/leads" 
+              className="inline-flex items-center space-x-1 text-xs text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              <Shield className="w-3 h-3" />
+              <span>Admin</span>
+            </Link>
+          </div>
         </div>
       </footer>
     </div>
@@ -275,6 +284,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MinimalLanding />} />
         <Route path="/leads" element={<LeadsAdmin />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </Router>
   );
